@@ -7,13 +7,13 @@ tem os códigos pronto do arquivo dockerfile e a script para criar o banco em qu
 junto ao BACKUP restore rode os seguintes comando docker
 
  1. para criar a imagem execute:
-    => docker build -t i-db-postgres-alura . --build-arg FILE=/file/dump_alura.sql --build-arg DBNAME=alura
+    => docker build -t i-db-postgres15-alura . --build-arg FILE=/file/dump_alura.sql --build-arg DBNAME=alura
    obs: 
-     - i-alura-db-postgres13-> é o nome da imagem
+     - i-alura-db-postgres15-> é o nome da imagem
      - bkp_banco_alura.sql -> é o arquivo backup do pcigma
      - pcigmadb-> é o nome do Banco de Dados a Criar
  2. para criar o conteiner execute:
-    => docker run --name c-db-alura -d -p 4000:5432 -e POSTGRES_PASSWORD=postgres i-db-postgres-alura
+    => docker run --name c-db-postgres15-alura -d -p 6000:5432 -e POSTGRES_PASSWORD=postgres i-db-postgres15-alura
    obs:
       - c-pcigma-db -> é o nome do conteiner
       - 4000:5432 -> é o numero da porta com qual vc vai se conectar do seu pgadmin / e numero de porta interna do conteiner 
