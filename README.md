@@ -8,10 +8,12 @@ junto ao BACKUP restore rode os seguintes comando docker
 
  1. para criar a imagem execute:
     => sudo docker build -t i-db-postgres15-alura . --build-arg FILE=/file/dump_alura.sql --build-arg DBNAME=alura
+
    obs: 
      - i-alura-db-postgres15-> é o nome da imagem
      - bkp_banco_alura.sql -> é o arquivo backup do pcigma
      - pcigmadb-> é o nome do Banco de Dados a Criar
+
  2. para criar o conteiner execute:
     => sudo docker run --name c-db-postgres15-alura -d -p 6000:5432 -e POSTGRES_PASSWORD=postgres i-db-postgres15-alura
    obs:
@@ -22,7 +24,7 @@ junto ao BACKUP restore rode os seguintes comando docker
 
 agora é so se conectar no postgres pelo PGADIN4
     host: localhost (iplocal da máquina), 
-    porta: 3004
+    porta: 4000
     database: postgres
     usuario: postgres
     senha: postgres
